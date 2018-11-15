@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/CustomModelSelectedPointsCustomization/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/CustomModelSelectedPointsCustomization/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/CustomModelSelectedPointsCustomization/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/CustomModelSelectedPointsCustomization/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to customize the appearance of selected series points
 
 
