@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 16
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomModelSelectedPointsCustomization", "CustomModelSelectedPointsCustomization\CustomModelSelectedPointsCustomization.csproj", "{E2CB0A38-6EEC-419A-8632-9ECCD3EFAEDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomModelSelectedPointsCustomization", "CustomModelSelectedPointsCustomization\CustomModelSelectedPointsCustomization.Net5.csproj", "{E2CB0A38-6EEC-419A-8632-9ECCD3EFAEDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
