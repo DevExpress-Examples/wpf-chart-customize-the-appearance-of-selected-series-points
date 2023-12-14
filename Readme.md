@@ -15,7 +15,7 @@ This example shows how to create a custom series model and change the selection 
 
 3. Assign this template to the `PointTemplate` property of a custom series model ([CustomBar2DModel.PointTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.CustomPie2DModel.PointTemplate)).
 
-4. Create the `IsSelectedConverter`. For this, create the `IsSelectedToBrushConverter` class inherited from `IValueConverter`. Then, implement `Convert`  and `ConvertBack` methods. The `Convert` method returns the black color if the `IsSelected` value is `true` and red color -  otherwise.
+4. Create the `IsSelectedConverter`. For this, create the `IsSelectedToBrushConverter` class inherited from `IValueConverter`. Then, implement `Convert`  and `ConvertBack` methods. The `Convert` method returns black if the `IsSelected` value is `true`; otherwise, red.
 
 5. Bind the `Border.Background` property to the [SeriesPointPresentationData.IsSelected](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.SeriesPointPresentationData.IsSelected) property with `IsSelectedToBrushConverter` from the static resource. Set the [ChartControl.SelectionMode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.ChartControl.SelectionMode) property to `Multiple` to enable the chart selection. 
 
