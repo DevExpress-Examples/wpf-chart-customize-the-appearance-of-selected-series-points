@@ -17,7 +17,7 @@ This example shows how to create a custom series model and change the selection 
 
 4. Create the `IsSelectedConverter`. For this, create the `IsSelectedToBrushConverter` class inherited from `IValueConverter`. Then, implement `Convert`  and `ConvertBack` methods. The `Convert` method returns black if the `IsSelected` value is `true`; otherwise, red.
 
-5. Bind the `Border.Background` property to the [SeriesPointPresentationData.IsSelected](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.SeriesPointPresentationData.IsSelected) property with `IsSelectedToBrushConverter` from the static resource. Set the [ChartControl.SelectionMode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.ChartControl.SelectionMode) property to `Multiple` to enable the chart selection. 
+5. Bind the `Border.Background` property to the [SeriesPointPresentationData.IsSelected](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.SeriesPointPresentationData.IsSelected) property with `IsSelectedToBrushConverter` from the static resource. Set the [ChartControl.SelectionMode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.ChartControl.SelectionMode) property to `Multiple` to enable chart selection. 
 
 ## Files to Review
 
