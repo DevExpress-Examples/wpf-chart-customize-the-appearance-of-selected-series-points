@@ -13,7 +13,7 @@ This example shows how to create a custom series model and change the selection 
 
 2. Create the `System.Windows.Controls.ControlTemplate` object which contains a Border element to create your own custom model.
 
-3. Assign this template to the `PointTemplate` property of a series custom model ([CustomBar2DModel.PointTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.CustomPie2DModel.PointTemplate)).
+3. Assign this template to the `PointTemplate` property of a custom series model ([CustomBar2DModel.PointTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.CustomPie2DModel.PointTemplate)).
 
 4. Create the `IsSelectedConverter`. For this, create the `IsSelectedToBrushConverter` class inherited from `IValueConverter`. Then, implement `Convert`  and `ConvertBack` methods. The `Convert` method returns the black color if the `IsSelected` value is `true` and red color -  otherwise.
 
