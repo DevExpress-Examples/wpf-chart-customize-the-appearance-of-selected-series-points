@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Chart for WPF How to customize the appearance of selected series points
+# Chart for WPF - How to Customize the Appearance of Selected Series Points
 
 This example shows how to create a custom series model and change the selection color for series points.
 
