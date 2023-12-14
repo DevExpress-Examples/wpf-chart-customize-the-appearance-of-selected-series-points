@@ -1,15 +1,15 @@
-﻿Imports System.Globalization
+Imports System.Globalization
 Imports System.Windows
 Imports System.Windows.Data
 Imports System.Windows.Media
 
 Namespace CustomModelSelectedPointsCustomization
 
-    Partial Public Class MainWindow
+    Public Partial Class MainWindow
         Inherits Window
 
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
     End Class
 
@@ -18,9 +18,10 @@ Namespace CustomModelSelectedPointsCustomization
 
         Public Function Convert(ByVal value As Object, ByVal targetType As System.Type, ByVal parameter As Object, ByVal culture As CultureInfo) As Object Implements IValueConverter.Convert
             If TypeOf value Is Boolean AndAlso targetType Is GetType(Brush) Then
-                Dim isSelected As Boolean = DirectCast(value, Boolean)
+                Dim isSelected As Boolean = CBool(value)
                 Return If(isSelected, Brushes.Black, Brushes.Red)
             End If
+
             Return Nothing
         End Function
 
