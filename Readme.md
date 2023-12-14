@@ -3,19 +3,29 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T209781)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# Chart for WPF How to customize the appearance of selected series points
+
+This example shows how to create a custom series model and change the selection color for series points.
+
+![Chart](./images/Chart.png)         
+
+1. Create an object that represents a custom model of a particular series [CustomBar2DModel](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.CustomBar2DModel) and assign it to the `Model` property of a corresponding series type ([BarSeries2D.Model](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.BarSeries2D.Model)).
+
+2. Create the `System.Windows.Controls.ControlTemplate` object which contains a Border element to create your own custom model.
+
+3. Assign this template to the `PointTemplate` property of a series custom model ([CustomBar2DModel.PointTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.CustomPie2DModel.PointTemplate)).
+
+4. Create the `IsSelectedConverter`. For this, create the `IsSelectedToBrushConverter` class inherited from `IValueConverter`. Then, implement `Convert`  and `ConvertBack` methods. The `Convert` method returns the black color if the `IsSelected` value is `true` and red color -  otherwise.
+
+5. Bind the `Border.Background` property to the [SeriesPointPresentationData.IsSelected](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.SeriesPointPresentationData.IsSelected) property with `IsSelectedToBrushConverter` from the static resource. Set the [ChartControl.SelectionMode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.ChartControl.SelectionMode) property to `Multiple` to enable the chart selection. 
+
+## Files to Review
 
 * [MainWindow.xaml](./CS/CustomModelSelectedPointsCustomization/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/CustomModelSelectedPointsCustomization/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/CustomModelSelectedPointsCustomization/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/CustomModelSelectedPointsCustomization/MainWindow.xaml.vb))
-<!-- default file list end -->
-# How to customize the appearance of selected series points
 
+## Documentation
 
-This example shows how to change the selection color for series points. For this, it's necessary to create a custom series model.<br /><br />
-<p>To accomplish this, do the following:</p>
-<p>1. Create an object that represents a custom model of a particular series (<a href="http://documentation.devexpress.com/#WPF/clsDevExpressXpfChartsCustomBar2DModeltopic"><u>CustomBar2DModel</u></a>) and assign it to the<strong> Model</strong> property of a corresponding series type (<a href="http://documentation.devexpress.com/#WPF/DevExpressXpfChartsBarSeries2D_Modeltopic"><u>BarSeries2D.Model</u></a>): <a href="https://www.devexpress.com/Support/Center/p/E4593">E4593: How to create custom models for chart series </a><br /><br />2. Create the <strong>System.Windows.Controls.ControlTemplate</strong> object which contains a Border element to create your own custom model.<br /><br />3. Assign this template to the PointTemplate property of a series custom model (<a href="http://documentation.devexpress.com/#WPF/DevExpressXpfChartsCustomBar2DModel_PointTemplatetopic"><u>CustomBar2DModel.PointTemplate</u></a>). <br /><br />4. Create the IsSelectedConverter. For this, create the <strong>IsSelectedToBrushConverter</strong> class inheritted from <strong>IValueConverter</strong>. Then, implement<strong> Convert</strong> and <strong>ConvertBack</strong> methods. The <strong>Convert</strong> method will return the black color if the <strong>IsSelected</strong> value is<strong>  true</strong> and red color -  otherwise.<br /><br />5. Bind the <strong>Border.Background</strong> property to the <strong>SeriesPointPresentationData.IsSelected</strong> property using the <strong>IsSelectedToBrushConverter </strong>from the static resource. <br /><br /> Note that the <a href="https://documentation.devexpress.com/#WPF/DevExpressXpfChartsChartControl_SelectionModetopic">ChartControl.SelectionMode</a> property must be set to<strong> Multiple</strong> to enable the chart selection. </p>
-
-<br/>
-
+* [Series Points](https://docs.devexpress.com/WPF/6340/controls-and-libraries/charts-suite/chart-control/series/series-points)
 
